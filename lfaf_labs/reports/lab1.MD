@@ -41,16 +41,16 @@ I've managed to create 2 classes: **Grammar** and **Finite_automaton** in order 
 
 Here is the input parameter given to the grammar object during initiation.
 
-![screenshot](screenshots/input1.PNG)
+![screenshot](screenshots/input1.png)
 
 **Finite_automaton** class has one method __CheckWord__ that checks whether an input string is valid based on the FA's attributes. i mostly check validation through the initial states, final states and alphabet present.
 
 **Main.py** is used to instantiate Grammar class, and finally call the methods needed as shown bellow:
-![screenshot](screenshots/main1.PNG)
+![screenshot1](screenshots/main1.png)
 
 ---
 ## Results
-![screenshot](screenshots/res1.PNG)
+![screenshot3](screenshots/res1.png)
 
 ---
 ## Conclusions
