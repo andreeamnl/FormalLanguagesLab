@@ -39,10 +39,11 @@
                 Non-terminal symbol → terminal symbol or Non-terminal symbol.
 
     Here is my implementation:
-![screenshot](screenshots/gr1.PNG)
+    
+![screenshot](screenshots/gr1.png)
 
 ## Results
-![screenshot](screenshots/gr2.PNG)
+![screenshot](screenshots/gr2.png)
 
 3. Objectives
 
@@ -51,10 +52,10 @@
         Also the output is a dictionary, because my ***Grammar*** class accepts a dictionary as input. Therefore this is the desired output *for my code*.
 
     Here is my implementation:
-    ![screenshot](screenshots/farg1.PNG)
+    ![screenshot](screenshots/farg1.png)
 
     ## Results
-    ![screenshot](screenshots/farg2.PNG)
+    ![screenshot](screenshots/farg2.png)
 
     b. Determine whether your FA is deterministic or non-deterministic.
     To determine whether an FA is an NFA or DFA, you need to check the following:
@@ -72,10 +73,10 @@
     For my implementation I've decided it's easier and faster to check if automaton is of type NFA, by identifying whether I encounter any multiple transitions with same input symbol of a state (check if current symbol exists in my symbol list (called ```counts```)), once this happens the return of the method automatically becomes False.
 
     Here is my implementation:
-    ![screenshot](screenshots/dfa_or_nfa.PNG)
+    ![screenshot](screenshots/dfa_or_nfa.png)
 
     ## Results
-    ![screenshot](screenshots/aut2.PNG)
+    ![screenshot](screenshots/aut2.png)
 
 
     c. Implement some functionality that would convert an NDFA to a DFA.
@@ -96,19 +97,19 @@
         The resulting DFA represents the same language as the original NDFA.
 
     Here is my *part* of implementation:
-    ![screenshot](screenshots/conv1.PNG)
-    ![screenshot](screenshots/conv2.PNG)
+    ![screenshot](screenshots/conv1.png)
+    ![screenshot](screenshots/conv2.png)
 
  
     d. Represent the finite automaton graphically 
     I've decided to use this tool I found on *http://magjac.com/graphviz-visual-editor/*.
     Here is the code provided.
     
-    ![screenshot](screenshots/visual1.PNG)
+    ![screenshot](screenshots/visual1.png)
 
     Here is the output:
 
-    ![screenshot](screenshots/visual2.PNG)
+    ![screenshot](screenshots/visual2.png)
 
 
 ---
