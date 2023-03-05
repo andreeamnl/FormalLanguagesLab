@@ -26,7 +26,11 @@ print(generated)
 generated = g.generate('S')
 print(generated)
 
-
+print("##################################")
+if g.check_grammar_type():
+    print("The grammar is of type 3.")
+else:
+    print("The grammar is not of type 3.")
 
 
 

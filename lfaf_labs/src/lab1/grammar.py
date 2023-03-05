@@ -8,7 +8,7 @@ class Grammar:
         self.non_terminals = set()
         self.start_symbol = None
         self.parse_grammar()
-
+    lowc=[]
     def parse_grammar(self):
         for lhs, rhs in self.grammar.items():
             self.non_terminals.add(lhs)
@@ -41,7 +41,7 @@ class Grammar:
                     final_states.append(state)
         print("Final states is ", final_states)
 
-
+        self.lowc=lowercase
         transition_functions = []
         for key in self.grammar:
             for state in self.grammar[key]:
@@ -68,4 +68,22 @@ class Grammar:
         else:
             print('Checking input word: ',input_word)
             print('Invalid word')
-    
+
+        automaton.fa_type()
+        automaton.to_reg_grammar()
+
+
+    def check_grammar_type(self):  ##checks whether grammar is of type 3, returns true if yes 
+        for lhs, rhs in self.grammar.items():
+            if lhs not in self.non_terminals:
+                return False
+            for symbol in rhs:
+                if len(symbol)>2:
+                    return False
+                if len(symbol)==2:
+                    if symbol[0] not in self.lowc and symbol[1] not in self.non_terminals:
+                        return False
+                if len(symbol)==1:
+                    if symbol[0] not in self.lowc:
+                        return False
+        return True
