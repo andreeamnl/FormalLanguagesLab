@@ -13,7 +13,7 @@
 
 ## Implementation description
 
-* I use two classes, ```Token``` and ```Lexer```. Token uses a keyword dictionary to be used by the lexer in order to identify them in the code input. The lexer class has a 'lex' function to iterate through each input charachter, identify it's type and return it to the used.
+* I use two classes, ```Token``` and ```Lexer```. Token uses a keyword dictionary to be used by the lexer in order to identify them in the code input. The lexer class has a 'lex' function to iterate through each input charachter, identify it's type and return it to the user.
 ```
         while self.pos < len(self.text):
             if self.text[self.pos].isdigit():  
@@ -27,7 +27,7 @@
 
 
 
-* The code you see above is used to identify digit literals, we loop through chars until we no longer see ints, the merged string is converted to int and returned to the user.
+* The code you see above is used to identify digit literals, we loop through chars until we no longer see ints, the merged string is returned to the user.
 
 
 ```
@@ -44,7 +44,7 @@
                     tokens.append(Token('IDENT', st))
 ```
 
-* The code above is used to identify identifiers, again we loop through the string, if it appears in token.keywords we return it as such, otherwise we return it as a plain identifier.
+* The code above is used to identify identifiers, again we loop through the string, if it appears in ```token.keywords``` we return it as such, otherwise we return it as a plain identifier.
 
 ```
             elif self.text[self.pos] == '+':
