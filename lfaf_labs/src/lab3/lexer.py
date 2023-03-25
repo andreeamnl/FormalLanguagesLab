@@ -23,7 +23,7 @@ class Lexer:
                     i+=1
                 self.pos=i
                 tokens.append(Token('INTEGER', int(st)))
-            if self.text[self.pos].isalpha():  #if current position is a digit, check if other digits follow it
+            if self.text[self.pos].isalpha():  #if current position is a char, check if other chars follow it
                 i=self.pos
                 st=""
                 while(self.text[i].isalpha()):
