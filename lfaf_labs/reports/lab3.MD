@@ -44,7 +44,7 @@
                     tokens.append(Token('IDENT', st))
 ```
 
-* The code above is used to identify identifiers, again we loop through the string, if it appears in ```token.keywords``` we return it as such, otherwise we return it as a plain identifier.
+* The code above is used to return identifiers, again we loop through the string, if it appears in ```token.keywords``` we return it as such, otherwise we return it as a plain identifier.
 
 ```
             elif self.text[self.pos] == '+':
