@@ -230,3 +230,5 @@ OK
 ```
 
 ## References
+1. Cojuhari I., Duca L., & Fiodorov I. Formal Languages and Finite Automata Guide for practical lessons. Technical University of Moldova
+2. "Chomsky Normal Form" Wikipedia: https://en.wikipedia.org/wiki/Chomsky_normal_form
