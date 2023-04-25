@@ -30,6 +30,18 @@ To obtain grammar in CNF we have to follow these 5 steps:
 
 
 ## Implementation description
+### Input grammar, v15
+```
+
+grammar = {
+    'S': ['AC', 'bA', 'B', 'aA'],
+    'A': ['e', 'aS', 'ABab'],
+    'B': ['a', 'bS'],
+    'C':['abC'],
+    'D':['AB']
+}
+
+```
 
 ### Remove epsilon productions
 * Elimination of epsilon productions. The epsilon elimination step involves removing any occurrence of epsilon from the logical formula by introducing new variables and clauses to represent the epsilon cases. This is done to ensure that the resulting CNF formula does not contain any empty clauses, which would make it unsatisfiable.
