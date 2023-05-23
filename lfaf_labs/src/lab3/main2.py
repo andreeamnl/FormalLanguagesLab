@@ -1,5 +1,8 @@
 from lexer import Lexer
-text = '''def bubblesort(arr):
+from Parser import Parser
+
+'''Input for lab 3
+text = def bubblesort(arr):
     n = len(arr)
     # Traverse through all array elements\n
     for i in range(n):
@@ -9,10 +12,34 @@ text = '''def bubblesort(arr):
             #nota 10 pls ^_^\n
             if arr[j] > arr[j+1] :
                 arr[j], arr[j+1] = arr[j+1], arr[j]
-'''
 
 lexer = Lexer(text)
 tokens = lexer.lex()
+'''
 
-for token in tokens:
-    print(token)
+
+'''for token in tokens:
+    print(token)'''
+
+# Lab 5 run program, insert user input.
+
+def run(fn, text):
+		# Generate tokens
+		lexer = Lexer(fn, text)
+		tokens, error = lexer.make_tokens()
+		if error: return None, error
+		
+		# Generate AST
+		parser = Parser(tokens)
+		ast = parser.parse()
+
+		return ast.node, ast.error
+
+
+
+while True:
+		text = input('shell > ')
+		result, error = run('<stdin>', text)
+
+		if error: print(error.as_string())
+		else: print(result)
